@@ -1,22 +1,24 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-
+//Using two pointers approach
 void find_pair(int* arr,int n)
 {
-    int i,j,k,flag=0;
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
-        for(j=0;j<n;j++)
+        int j=0,k=n-1;
+        while(j<k)
         {
-            for(k=0;k<n;k++)
+            int sum=arr[j]+arr[k];
+            if(sum==arr[i] && (i!=j && i!=k))
             {
-                if(arr[i]+arr[j]==arr[k] && (i!=j && j!=k && k!=i))
-                {
-                    cout<<i<<" "<<j<<" "<<k<<endl;
-                    return;
-                }
+                cout<<i<<" "<<j<<" "<<k<<endl;
+                return;
             }
+            else if(sum>arr[i])
+                k--;
+            else
+                j++;
         }
     }
     cout<<"No pair possible";

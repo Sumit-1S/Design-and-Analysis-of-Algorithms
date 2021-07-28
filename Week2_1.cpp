@@ -19,9 +19,11 @@ void find(int* arr,int n,int target)
     int count=0,f=0,l=n-1;
     while(f<l)
     {
-        int mid = f+(f+l)/2;
-        if(arr[mid]==target)
+        int mid = l+(f-l)/2;
+        if(arr[mid]==target){
             cout<<target<<" - "<<no_occur(arr,n,target,mid)<<endl;
+            return ;
+        }
         else if(arr[mid]>target)
             l = mid-1;
         else
