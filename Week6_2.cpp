@@ -26,7 +26,7 @@ bool bipartite(int **G, int n)
             {
                 if (color[i] == 0)
                     color[i] = curCol;
-                else if (color[i] != curCol)
+                else if (color[i] == curCol)
                     return false;
                 if (G[u][i] == 1)
                 {
