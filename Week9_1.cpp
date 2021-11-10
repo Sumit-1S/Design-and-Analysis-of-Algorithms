@@ -32,7 +32,7 @@ int main()
         if(graph[i][j]>(graph[i][k]+graph[k][j]) and
             (graph[k][j] != 99
             and graph[i][k] != 99))
-          graph[i][j]=graph[i][k]+graph[k][i];
+          graph[i][j]=graph[i][k]+graph[k][j];
       }
     }
   }
