@@ -17,6 +17,8 @@ int main()
     int sum=0;
     for(int i=0;i<n;i++)  cin>>arr[i];
     for(int i=0;i<n;i++)  sum+=arr[i];
-    SumSubset(arr,n,sum/2)?cout<<"Yes":cout<<"No";
+    sum%2==0  ? (SumSubset(arr,n,sum/2) ? cout<<"Yes":cout<<"No") 
+              : cout<<"No";
+    
     return 0;
 }
