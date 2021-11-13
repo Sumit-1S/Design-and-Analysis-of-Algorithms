@@ -9,6 +9,8 @@ bool SumSubset(int *arr,int n,int sum)
   return SumSubset(arr,n-1,sum) or SumSubset(arr,n-1,sum-arr[n-1]);
 }
 
+
+
 int main()
 {
     int n;
