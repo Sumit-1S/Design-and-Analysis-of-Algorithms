@@ -51,6 +51,6 @@ int main()
                     {0,5,7,15,0,8,9},
                     {0,0,0,6,8,0,11},
                     {0,0,0,0,9,11,0}};
-	cout<<primsMST(graph);
+	cout<<"Maximum Spanning Weight : "<<primsMST(graph);
 	return 0;
 }

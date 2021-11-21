@@ -1,12 +1,15 @@
 #include<bits/stdc++.h>
+#include<unordered_map>
 using namespace std;
 
 int main()
 {
     int n,t,max_count=INT_MIN,res=-1;
+    cout<<"Enter size of array : ";
     cin>>n;
     unordered_map<int,int> map;
     vector<int> v;
+    cout<<"Enter Elements of array : ";
     for(int i=0;i<n;i++)
     {
       cin>>t;
@@ -21,7 +24,7 @@ int main()
       if (max_count < i.second) {
         res = i.first;max_count = i.second;
       }
-    }
+    } 
     
     max_count>=n/2 ? cout<<"YES" : cout<<"NO";
     cout<<endl;

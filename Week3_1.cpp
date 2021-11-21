@@ -28,18 +28,22 @@ int* insertion(int* arr,int n)
 int main()
 {
     int t;
+    cout<<"Enter number of testcases: ";
     cin>>t;
     while(t)
     {
         t--;
         int n;
+        cout<<"Enter size of array: ";
         cin>>n;
         int* arr = new int[n];
+        cout<<"Enter elemnets of array: ";
         for(int i=0;i<n;i++)
             cin>>arr[i];
         arr = insertion(arr,n);
         for(int i=0;i<n;i++)
             cout<<arr[i]<<" ";
+        cout<<endl;
     }
     return 0;
 }

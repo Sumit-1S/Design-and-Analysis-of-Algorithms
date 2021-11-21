@@ -85,14 +85,17 @@ void find_duplicate(int *arr,int n)
 int main()
 {
     int t;
+    cout<<"Enter number of testcases: ";
     cin>>t;
 
     while(t)
     {
         t--;
         int n;
+        cout<<"Enter size of array: ";
         cin>>n;
         int *arr = new int[n];
+        cout<<"Enter elements of array: ";
         for(int i=0;i<n;i++)
             cin>>arr[i];
         Merge(arr,0,n-1);
@@ -100,6 +103,7 @@ int main()
             cout<<arr[i]<<" ";
         cout<<endl;
         find_duplicate(arr,n);
+        cout<<endl;
     }
     return 0;
 }

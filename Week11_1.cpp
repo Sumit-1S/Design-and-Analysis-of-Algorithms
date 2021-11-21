@@ -25,9 +25,11 @@ int MatrixMultiply(int arr[],int n)
 int main()
 {
     int n;
+    cout<<"Enter number of matrix to multiply: ";
     cin>>n;
     int *arr = new int[n+1];
+    cout<<"Enter dimensions of matrix : "<<endl;
     for(int i=0;i<=n;i++) cin>>arr[i];
     cout<< MatrixMultiply(arr,n+1);
-    return 0;
+    return 0; 
 }

@@ -35,16 +35,20 @@ void find(int* arr,int n,int target)
 int main()
 {
     int t;
+    cout<<"Enter number of testcases: ";
     cin>>t;
     while(t)
     {
         t--;
         int n;
+        cout<<"Enter size of array: ";
         cin>>n;
         int *arr = (int*)malloc(n*sizeof(int));
+        cout<<"Enter elements of array: ";
         for(int i=0;i<n;i++)
             cin>>arr[i];
         int k;
+        cout<<"Enter element to be searched: ";
         cin>>k;
         find(arr,n,k);
     }

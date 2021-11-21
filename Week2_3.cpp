@@ -13,21 +13,25 @@ void findPair(int *arr, int n,int key)
                 count++;
         }
     }
-    cout<<"Number of Pair : "<<count;
+    cout<<"Number of Pair : "<<count<<endl;
 }
 
 int main()
 {
     int t;
+    cout<<"Enter number of testcases: ";
     cin>>t;
     while(t)
     {
         t--;
         int n;
+        cout<<"Enter size of array: ";
         cin>>n;
         int *arr=(int*)malloc(n*sizeof(int));
+        cout<<"Enter elements of array: ";
         for(int i=0;i<n;i++)
             cin>>arr[i];
+        cout<<"Enter the value of key difference: ";
         int k;
         cin>>k;
         findPair(arr,n,k);

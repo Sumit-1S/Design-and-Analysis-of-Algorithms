@@ -4,8 +4,10 @@ using namespace std;
 int main()
 {
   int n;
+  cout<<"Enter size of array: ";
   cin>>n;
   priority_queue<int,vector<int>,greater<int> > prio;
+  cout<<"Enter elements of array : "<<endl;
   for(int i=0;i<n;i++)
   {
     int t;
@@ -23,6 +25,6 @@ int main()
     prio.push(count);
     total+=count;
   }while(!prio.empty());
-  cout<<total-count;
+  cout<<"Minimum computation: "<<total-count;
   return 0;
 }

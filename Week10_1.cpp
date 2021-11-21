@@ -16,8 +16,10 @@ struct comp{
 int main()
 {
     int n;
+    cout<<"Enter number of activities: ";
     cin>>n;
     duo *arr = new duo[n];
+    cout<<"Enter start and finish time: "<<endl;
     for(int i=0;i<n;i++)
     {
       cin>>arr[i].start>>arr[i].finish;
@@ -27,7 +29,7 @@ int main()
     vector<int> process_no;
 
     for(int i=0;i<n;i++)
-    {
+    { 
       if(arr[i].start>=prev_end)
       {
         prev_end=arr[i].finish;
@@ -36,7 +38,7 @@ int main()
       }
     }
     cout<<"No of non conflicting process : "<<non_conflict<<endl;
-    cout<<"List of selected process : ";
+    cout<<"List of selected process : "<<endl;
     for(int i=0;i<process_no.size();i++)
       cout<<process_no[i]<<" ";
     return 0;

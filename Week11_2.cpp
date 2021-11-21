@@ -12,9 +12,12 @@ int coin(int *arr,int n,int t)
 int main()
 {
     int n,t;
-    cin>>n;
+    cout<<"Enter number of coins : ";
+    cin>>n; 
     int *arr = new int[n];
+    cout<<"Enter values of coins : "<<endl;
     for(int i=0;i<n;i++) cin>>arr[i];
+    cout<<"Enter Desired amount : ";
     cin>>t;
     cout<<coin(arr,n,t);
     return 0;

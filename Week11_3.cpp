@@ -9,14 +9,14 @@ bool SumSubset(int *arr,int n,int sum)
   return SumSubset(arr,n-1,sum) or SumSubset(arr,n-1,sum-arr[n-1]);
 }
 
-
-
 int main()
 {
     int n;
+    cout<<"Enter number of elements in array : ";
     cin>>n;
     int *arr = new int[n];
     int sum=0;
+    cout<<"Enter elements of array : ";
     for(int i=0;i<n;i++)  cin>>arr[i];
     for(int i=0;i<n;i++)  sum+=arr[i];
     sum%2==0  ? (SumSubset(arr,n,sum/2) ? cout<<"Yes":cout<<"No") 

@@ -14,15 +14,6 @@ int main()
       cin>>graph[i][j];
   }
 
-  for(int i=0;i<V;i++)
-  {
-    for(int j=0;j<V;j++)
-    {
-      cout<<graph[i][j]<<" ";
-    }
-    cout<<"\n";
-  }
-
   for(int k=0;k<V;k++)
   {
     for(int i=0;i<V;i++)
@@ -36,7 +27,8 @@ int main()
       }
     }
   }
-  
+  cout<<endl;
+  cout<<"Shortest distance Matrix:"<<endl;
   for(int i=0;i<V;i++)
   {
     for(int j=0;j<V;j++)

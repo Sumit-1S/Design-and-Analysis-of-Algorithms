@@ -15,8 +15,10 @@ struct comp{
 int main()
 {
     int n;
+    cout<<"Enter total number of task : ";
     cin>>n;
     trio *arr = new trio[n];
+    cout<<"Enter Time taken and Deadline of each task : ";
     for(int i=0;i<n;i++)
     {
       arr[i].index=i+1;
@@ -25,8 +27,6 @@ int main()
 
     sort(arr,arr+n,comp());
     
-    for(int i=0;i<n;i++)
-      cout<<arr[i].deadline<<" ";
     int count=0,time=0;
     vector<int> v;
     for(int i=0;i<n;i++)
@@ -36,19 +36,13 @@ int main()
         count++;
         v.push_back(arr[i].index);
         time+=arr[i].duration;
-      }
+      } 
     }
-    cout<<count;
 
-
+    cout<<"Max number of tasks : "<<count<<endl;
+    
+    for(int i=0;i<v.size();i++)
+      cout<<v[i]<<" ";
+    
     return 0;
 }
-
-// 7
-// 2 2
-// 1 3
-// 3 8
-// 2 6
-// 2 2
-// 2 5
-// 1 3

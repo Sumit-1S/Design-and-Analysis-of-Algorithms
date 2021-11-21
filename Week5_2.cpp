@@ -70,15 +70,19 @@ void Merge(int *arr,int l,int r)
 int main()
 {
     int t;
+    cout<<"Enter number of testcases: ";
     cin>>t;
     while(t)
     {
         t--;
         int n,target;
+        cout<<"Enter size of array: ";
         cin>>n;
         int *arr = new int[n];
+        cout<<"Enter elements of array: ";
         for(int i=0;i<n;i++)
             cin>>arr[i];
+        cout<<"Enter target to be achieved: ";
         cin>>target;
         Merge(arr,0,n-1);
         for(int i=0,j=n-1;i<j;)
